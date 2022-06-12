@@ -33,8 +33,10 @@ app.use('/api/v1/', router);
 // add route here to serving static file
 app.use('/uploads', express.static('uploads'));
 
-app.get('/', (req, res) => {
-  res.send('Hello Sodikul Talent Dumbways');
+app.get('/', function (req, res) {
+  res.send({
+    message: 'Hello Sodikul',
+  });
 });
 
 server.listen(port, () => console.log(`Listening on port ${port}!`));
